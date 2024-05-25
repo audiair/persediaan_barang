@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('kategori')" :active="request()->routeIs('kategori') || request()->routeIs('kategori.create')">
+                    <x-nav-link :href="route('kategori')" :active="request()->routeIs('kategori')">
                         {{ __('Kategori Barang') }}
                     </x-nav-link>
                 </div>

@@ -14,7 +14,7 @@
                         Tambah Kategori Barang
                    </x-primary-button>
                    <br/><br/>
-                   <x-table">
+                   <x-table>
                         <x-slot name="header">
                             <tr>
                                 <th>#</th>
@@ -26,7 +26,7 @@
                         @php $num=1; @endphp
                         @foreach($kategoris as $kategori)
                         <tr>
-                            <td>{{ $num++ }}</td>
+                            <td class = "text-black">{{ $num++ }}</td>
                             <td>{{ $kategori->id_kategori }}</td>
                             <td>{{ $kategori->kategori_barang }}</td> 
                             <td>
