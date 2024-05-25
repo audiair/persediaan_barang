@@ -11,20 +11,20 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <!-- CONTENT HERE -->
-                    <form method="post" action="{{ route('kategori.update', $kategori->id_kategori) }}" class="mt-6 space-y-6">
+                    <form method="post" action="{{ route('kategori.update', $kategoris->id_kategori) }}" class="mt-6 space-y-6">
                         @csrf
                         @method('PATCH')
                         <div class="max-w-xl">
                             <x-input-label for="id_kategori" value="id_kategori"/>
                             <x-text-input id="id_kategori" type="text" name="id_kategori" class="mt-1 block w-full"
-                                value="{{ old('id_kategori', $book->id_kategori) }}" required />
+                                value="{{ old('id_kategori', $kategoris->id_kategori) }}" required />
                             <x-input-error class="mt-2" :messages="$errors->get('id_kategori')" />
                         </div>
 
                         <div class="max-w-xl">
                             <x-input-label for="kategori_barang" value="kategori_barang" />
                             <x-text-input id="kategori_barang" type="text" name="kategori_barang" class="mt-1 block w-full"
-                                value="{{ old('kategori_barang', $book->kategori_barang) }}" required />
+                                value="{{ old('kategori_barang', $kategoris->kategori_barang) }}" required />
                             <x-input-error class="mt-2" :messages="$errors->get('kategori_barang')" />
                         </div>
 

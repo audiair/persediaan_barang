@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/kategoris/create', [KategoriBarangController::class, 'create'])->name('kategori.create');
     Route::post('/kategoris', [KategoriBarangController::class, 'store'])->name('kategori.store');
     Route::get('/kategoris/{id_kategori}/edit', [KategoriBarangController::class, 'edit'])->name('kategori.edit');
-    Route::match(['put', 'patch'], '/kategoris/{id_kategori}', [KategoriBarangController::class, 'update'])->name('kategori.update');
+    Route::match(['put', 'patch'],'/kategoris/{id_kategori}', [KategoriBarangController::class, 'update'])->name('kategori.update');
     Route::delete('/kategoris/{id_kategori}', [KategoriBarangController::class, 'destroy'])->name('kategori.destroy');
 });
 
