@@ -48,4 +48,12 @@ class KategoriBarangController extends Controller
 
         return redirect()->route('kategori');
     }
+
+    public function destroy(string $id_kategori){
+        $kategori = Kategori::find($id_kategori);
+        $kategori->delete();
+
+        return redirect()->route('kategori');
+    }
+
 }
