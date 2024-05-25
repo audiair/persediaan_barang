@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Kategori Barang') }}
         </h2>
     </x-slot>
@@ -26,7 +26,7 @@
                         @php $num=1; @endphp
                         @foreach($kategoris as $kategori)
                         <tr>
-                            <td class = "text-black">{{ $num++ }}</td>
+                            <td>{{ $num++ }}</td>
                             <td>{{ $kategori->id_kategori }}</td>
                             <td>{{ $kategori->kategori_barang }}</td> 
                             <td>
