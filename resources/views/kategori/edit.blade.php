@@ -15,14 +15,14 @@
                         @csrf
                         @method('PATCH')
                         <div class="max-w-xl">
-                            <x-input-label for="id_kategori" value="id_kategori"/>
+                            <x-input-label for="id_kategori" value="ID KATEGORI"/>
                             <x-text-input id="id_kategori" type="text" name="id_kategori" class="mt-1 block w-full"
                                 value="{{ old('id_kategori', $kategoris->id_kategori) }}" required />
                             <x-input-error class="mt-2" :messages="$errors->get('id_kategori')" />
                         </div>
 
                         <div class="max-w-xl">
-                            <x-input-label for="kategori_barang" value="kategori_barang" />
+                            <x-input-label for="kategori_barang" value="KATEGORI BARANG" />
                             <x-text-input id="kategori_barang" type="text" name="kategori_barang" class="mt-1 block w-full"
                                 value="{{ old('kategori_barang', $kategoris->kategori_barang) }}" required />
                             <x-input-error class="mt-2" :messages="$errors->get('kategori_barang')" />
