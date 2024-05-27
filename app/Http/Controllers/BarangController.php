@@ -22,7 +22,7 @@ class BarangController extends Controller
         $validated = $request->validate([
             'id_barang' => 'required',
             'nama_barang' => 'required|max:150',
-            'kategori_barang' => 'required',
+            'id_kategori' => 'required',
             'stok' => 'required',
             'satuan' => 'required|max:10',
         ]);
