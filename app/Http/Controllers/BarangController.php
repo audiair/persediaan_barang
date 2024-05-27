@@ -35,4 +35,35 @@ class BarangController extends Controller
             return redirect()->route('barang.create');
         }
     }
+
+    public function edit(string $id_barang){
+        $data['barangs'] = Barang::find($id_barang);
+        $data['kategoris'] = Kategori::pluck('kategori_barang', 'id_kategori');
+        
+        return view('barang.edit', $data);
+    }
+
+    public function update(Request $request, string $id_barang){
+        $barang = Barang::find($id_barang);
+
+        $validated = $request->validate([
+            'id_barang' => 'required',
+            'nama_barang' => 'required|max:150',
+            'id_kategori' => 'required',
+            'stok' => 'required',
+            'satuan' => 'required|max:10',
+        ]);
+        
+        Barang::where('id_barang', $id_barang)->update($validated);
+
+        return redirect()->route('barang');
+    }
+  
+    public function destroy(string $id_barang){
+        $barang = Barang::find($id_barang);
+        $barang->delete();
+
+        return redirect()->route('barang');
+    }
+
 }

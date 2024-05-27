@@ -12,6 +12,8 @@ class Barang extends Model
 
     protected $primaryKey = 'id_barang';
 
+    public $incrementing = false;
+
     public function kategori(): BelongsTo
     {
         return $this->belongsTo(Kategori::class, 'id_kategori');

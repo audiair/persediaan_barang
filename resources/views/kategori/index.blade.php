@@ -35,8 +35,8 @@
                                 </x-primary-button>
 
                                 <x-danger-button x-data="" x-on:click.prevent="$dispatch('open-modal',
-                                'confirm-kategori-deletion')" x-on:click="$dispatch('set-action',
-                                '{{ route('kategori.destroy', $kategori->id_kategori) }}')"> {{ __('Delete')}}
+                                'confirm-barang-deletion')" x-on:click="$dispatch('set-action',
+                                '{{ route('barang.destroy', $barang->id_barang) }}')"> {{ __('Delete')}}
                                 </x-danger-button>
                             </td>    
                         </tr> 
@@ -44,7 +44,7 @@
                    </x-table>
 
                    <!-- MODAL DELETE -->
-                   <x-modal name="confirm-kategori-deletion" focusable maxWidth="xl">
+                   <x-modal name="confirm-barang-deletion" focusable maxWidth="xl">
                         <form method="post" x-bind:action="action" class="p-6">
                             @csrf
                             @method('delete')
